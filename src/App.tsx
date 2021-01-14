@@ -1,17 +1,18 @@
-import { FunctionComponent } from 'react';
-import { Router, RouteComponentProps } from '@reach/router';
+import { HashRouter, Route, Routes} from 'react-router-dom';
 
+import Inicio from './inicio/view/Inicio';
 import Login from './login/view/Login';
 
 import 'antd/dist/antd.css';
 
-const LoginVista: FunctionComponent<RouteComponentProps> = () => <Login />;
-
 const App = () => {
   return (
-    <Router>
-      <LoginVista path='/' />
-    </Router>
+    <HashRouter>
+      <Routes>
+        <Route element={ <Login /> } path='/' />
+        <Route element={ <Inicio /> } path='inicio' />
+      </Routes>
+    </HashRouter>
   );
 }
 
