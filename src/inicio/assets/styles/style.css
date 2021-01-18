@@ -1,0 +1,11 @@
+.ContenidoMaterias {
+  margin-top: 3rem;
+}
+
+.TituloTarjetaMateria {
+  text-align: center;
+}
+
+.TituloTarjetaMateria__nombre {
+  font-size: 1.5rem;
+}

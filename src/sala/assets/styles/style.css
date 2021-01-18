@@ -1,0 +1,64 @@
+.InformacionSala {
+  color: white;
+  background-color:#0583F2;
+  padding: 1.5rem 1rem;
+  height: calc(100vh - 70px);
+}
+
+.InformacionSala__titulo {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.PublicacionesSala, .ChatSala {
+  margin: 3rem 2rem 0 2rem;
+}
+
+.PublicacionesSala__titulo, .ChatSala__titulo {
+  font-size: 2rem;
+}
+
+.PublicacionesSala__publicacion {
+  margin-top: 1rem!important;
+}
+
+.ChatSala {
+  display: grid;
+  grid-template-rows: 1fr 11fr;
+}
+
+.MensajesChatSala {
+  border: 2px solid #0583F2;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.MensajeChatSala {
+  background-color: #E9E9E9;
+  overflow-wrap: break-word;
+}
+
+.MensajeChatSalaPropio {
+  background-color: #0583F2;
+  overflow-wrap: break-word;
+  color: white;
+}
+
+.MensajeChatSala__tiempo, .MensajeChatSalaPropio__tiempo {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.2rem;
+  font-size: 0.65rem;
+}
+
+.MensajeChatSala, .MensajeChatSalaPropio {
+  border-radius: 3px;
+  padding: 0.5rem;
+  font-weight: 600;
+  max-width: 100%;
+}
+
+.InformacionSala, .PublicacionesSala, .ChatSala {
+  overflow-y: auto;
+  box-sizing: border-box;
+}

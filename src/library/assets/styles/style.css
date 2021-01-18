@@ -1,0 +1,11 @@
+.BarraNavegacion{
+  height: 70px;
+  background-color: #0583F2;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.BarraNavegacion__opciones {
+  height: 70px;
+  margin: 0 1rem 0 1rem;
+}
