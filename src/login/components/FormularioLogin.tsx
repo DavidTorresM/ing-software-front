@@ -6,15 +6,25 @@ import {
 } from 'antd';
 import { InfoCircleOutlined, UserOutlined } from '@ant-design/icons';
 
+import { message } from 'antd';
+import ls from 'local-storage';
+import { useNavigate } from 'react-router-dom';
+
 import { login } from '../../library/services/login.service';
 
 const FormularioLogin = () => {
+  const navegar = useNavigate();
+
   const iniciarSesion = async (valores: any) => {
     const sesion = await login(valores.correo, valores.contrasenia);
    
     if (sesion) {
-      console.log('sesion iniciada.');
+      ls('sesion', sesion);
+      navegar('inicio');
+      return;
     }
+
+    message.error('Inserta datos correctos para iniciar sesion');
     
     return;
   };
