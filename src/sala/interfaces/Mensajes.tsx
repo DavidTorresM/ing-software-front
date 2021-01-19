@@ -1,11 +1,14 @@
 interface AutorMensaje {
-  nombre: string;
   id: string;
+  email: string;
+  nombre: string;
+  primerApellido: string;
+  segudoApellido: string;
 }
 
 interface Mensaje {
   autor: AutorMensaje;
-  horaEnviado: string;
+  fechaEnviado: string;
   texto: string;
 };
 

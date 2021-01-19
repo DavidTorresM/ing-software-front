@@ -27,7 +27,7 @@ const Sala = () => {
         </Col>
 
         <Col sm={ 10 }>
-          <ChatSala /> 
+          <ChatSala id={Number(id)} /> 
         </Col>
       </Row>
     </>

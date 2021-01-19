@@ -4,20 +4,25 @@ import { Col, Row } from 'antd';
 
 interface MensajeChatSalaProps {
   texto: string;
+  fechaEnviado: string;
+  nombre:string;
+  primerApellido:string;
+  segundoApellido:string;
 };
 
-const MensajeChatSala: FunctionComponent<MensajeChatSalaProps> = ({ texto }) => {
+const MensajeChatSala: FunctionComponent<MensajeChatSalaProps> = ( props ) => {
+  let date: Date = new Date(props.fechaEnviado);  
   return (
     <Row>
       <Col span={ 12 }>
-        <p>De: Fulanito</p>
+        <p>De: {props.nombre} {props.primerApellido} {props.segundoApellido}</p>
         
         <div className="MensajeChatSala">
           <p>
-            { texto }
+            { props.texto }
           </p>
 
-          <span className="MensajeChatSala__tiempo">10:00 p.m 10/12/2010</span>
+          <span className="MensajeChatSala__tiempo">{date.toDateString()}</span>
         </div> 
       </Col>
     </Row>

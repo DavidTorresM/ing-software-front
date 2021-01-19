@@ -18,7 +18,11 @@ const MensajesChatSala: FunctionComponent<MensajesChatSalaProps> = ({ mensajes }
     }
 
     return (
-      <MensajeChatSala key={ index } texto={ mensaje.texto } />
+      <MensajeChatSala key={ index } texto={ mensaje.texto } 
+      fechaEnviado={mensaje.fechaEnviado} 
+        nombre={mensaje.autor.nombre} 
+        primerApellido={mensaje.autor.primerApellido} segundoApellido={mensaje.autor.segudoApellido}
+       />
     );
   });
 
