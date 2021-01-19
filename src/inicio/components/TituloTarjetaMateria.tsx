@@ -15,7 +15,7 @@ const BotonAbrirCurso: FunctionComponent<BotonAbrirCursoProps> = ({ idSala }) =>
   const navegacion = useNavigate();
 
   const abrirCurso = () => {
-    navegacion(`/curso/${idSala}`);
+    navegacion(`/sala/${idSala}`);
   };
   
   return (
@@ -28,11 +28,11 @@ const BotonAbrirCurso: FunctionComponent<BotonAbrirCursoProps> = ({ idSala }) =>
 const TituloTarjetaMateria: FunctionComponent<TituloTarjetaMateriaProps> = ({ nombreMateria, idSala }) => {
   return (
     <Row align='middle' className='TituloTarjetaMateria' gutter={ [16, 16] } justify='space-around'>
-      <Col xs={ 24 } sm={ 10 }>
+      <Col xs={ 24 } sm={ 24 }>
         <h4 className='TituloTarjetaMateria__nombre'>{ nombreMateria }</h4>
       </Col>
       
-      <Col xs={ 24 } sm={ 14 }>
+      <Col xs={ 24 } sm={ 24 }>
         <BotonAbrirCurso idSala={ idSala }/>
       </Col>
     </Row>

@@ -7,7 +7,7 @@ interface BarraNavegacionSalaProps {
 
 const BarraNavegacionSala: FunctionComponent<BarraNavegacionSalaProps> = ({ materia }) => {
   return (
-    <BarraNavegacion titulo={ `Sala de ${materia}` } />
+    <BarraNavegacion titulo={ `Sala de ${materia}` } sala={ true } />
   );
 };
 
