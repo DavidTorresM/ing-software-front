@@ -2,6 +2,10 @@ import { post, get } from './fetch';
 import type { MateriaInformacion } from '../../inicio/interfaces/MateriaInformacion';
 import type { SalaDTO } from '../interfaces/Sala';
 import { Mensaje } from '../../sala/interfaces/Mensajes';
+import { io } from 'socket.io-client';
+
+
+
 
 export const publicar = async (dto: any): Promise< boolean | null > => {
   const response = await post('/publicacion/crear', dto);
@@ -26,6 +30,26 @@ export const obtenerMensajesSala = async (idSala: number): Promise<Mensaje[]> =>
   console.log(response.data);
   return response.data;
 };
+
+export const enviarMensajeSala = async (mensaje: Object): Promise<Mensaje[]> => {
+  
+  const response = await post(`/mensaje/crear/`, mensaje);
+  console.log(response.data);
+  return response.data;
+};
+
+
+
+
+export const joinRoom = async (idRoom: number): Promise<Mensaje[]> => {
+  const response = await get(`/mensaje/listar/${idRoom}`, {});
+  console.log(response.data);
+  return response.data;
+};
+
+
+
+
 
 
 

@@ -10,6 +10,10 @@ interface Mensaje {
   autor: AutorMensaje;
   fechaEnviado: string;
   texto: string;
+  id?:number;
+  isSala?:number;
+  idAutor?:string;
 };
+
 
 export type { Mensaje };

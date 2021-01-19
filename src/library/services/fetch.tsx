@@ -12,7 +12,7 @@ export const get = (endopoint: string, parameters: any): Promise<any | null> => 
   return axios.get(`${endopoint}?${params.join('&')}`,getConfigToken());
 };
 
-const getConfigToken = () => {
+export const getConfigToken = () => {
   let sessionStr,config;
   if((sessionStr = localStorage.getItem("sesion"))){
     let rsL:RespuestaLogin = JSON.parse(sessionStr);
@@ -24,3 +24,12 @@ const getConfigToken = () => {
   return config;
 } 
 
+
+export const getIdStorage =():string => {
+  let sessionStr;
+  if((sessionStr = localStorage.getItem("sesion"))){
+    let rsL:RespuestaLogin = JSON.parse(sessionStr);
+    return rsL.id;
+  }
+  return "";
+}
