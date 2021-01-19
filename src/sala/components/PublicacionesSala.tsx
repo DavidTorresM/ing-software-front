@@ -3,15 +3,20 @@ import { useEffect,useState } from 'react';
 import { getPublicaciones } from '../../library/services/publicacion.service'
 import { Archivo,Publicacion } from '../../library/interfaces/Publicacion'
 import { SalaDTO } from '../../library/interfaces/Sala'
+import { FunctionComponent } from 'react';
 
 const { Panel } = Collapse;
 
+interface PublicacionesSalaProps {
+  id: number;
+};
+const PublicacionesSala: FunctionComponent<PublicacionesSalaProps> = ( {id} ) => {
 
-const PublicacionesSala = (  ): JSX.Element => {
   const [publicaciones2, setPublicaciones2] = useState<Publicacion[]>([]);
   useEffect(() => {
     const fetchData = async ()=>{
-        const response = await getPublicaciones(3);
+      console.log(id);
+        const response = await getPublicaciones(id);
 
         setPublicaciones2(response);
     }

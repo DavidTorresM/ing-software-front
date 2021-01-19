@@ -23,7 +23,7 @@ const Sala = () => {
         </Col>
 
         <Col sm={ 9 } style={ { overflowY: 'auto', maxHeight: 'calc(100vh - 70px)' } }>
-          <PublicacionesSala  />  
+          <PublicacionesSala id={Number(id)} />  
         </Col>
 
         <Col sm={ 10 }>
